@@ -17,3 +17,4 @@ class Libro():
         return self.autor
     def sbn(self):
         return self.sbn
+    # desarrollo los setter
