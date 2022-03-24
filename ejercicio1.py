@@ -17,4 +17,10 @@ class Libro():
         return self.autor
     def sbn(self):
         return self.sbn
-    # desarrollo los setter
+    # desarrollando los setter
+    def titulo(self, nuevo):
+        print ("Modificamos el título")
+        self.titulo = nuevo
+        print ("El título se ha sustituido por")
+        print (self.titulo) #Aquí vuelvo a pedir que retorne el atributo para confirmar
+  
