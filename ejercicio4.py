@@ -18,7 +18,11 @@ class Cuenta():
         if 0 < dineroretirar <= self.saldo:
             self.saldo = self.saldo - dineroretirar
             print("Usted ha retirado " + str(dineroretirar) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
-        
+        decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+        if decision == 1:
+            operacion()
+        else:
+            exit()        
     def ingreso(self):
         dineroingreso = int(input("""Ha seleccionado usted la opción de ingresar dinero a su cuenta.
 
@@ -27,7 +31,11 @@ class Cuenta():
 """))
         self.saldo += dineroingreso
         print("Usted ha ingresado " + str(dineroingreso) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
-       
+        decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+        if decision == 1:
+            operacion()
+        else:
+            exit()      
     def transferencia(self):
         dinerotransferencia = int(input("""Ha seleccionado usted la opción de transferir dinero a otra cuenta.
 
