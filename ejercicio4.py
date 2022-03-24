@@ -53,6 +53,23 @@ class Cuenta():
                 operacion()
             else:
                 exit()
+        else:
+            dinerotransferencia = int(input("""Ha seleccionado usted la opción de transferir dinero a otra cuenta.
+
+¿Cuánto dinero desea transferir?(Esta operación es libre de comisiones.)
+
+"""))
+
+            if 0 < (dinerotransferencia + dinerotransferencia * 0.05) <= self.saldo:        
+                A.saldo -= dinerotransferencia + dinerotransferencia * 0.05
+                B.saldo += dinerotransferencia
+                print("Usted ha transferido " + str(dinerotransferencia) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
+                print("El saldo de la cuenta B es de " + str(B.saldo) + "€.")
+                decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+                if decision == 1:
+                    operacion()
+                else:
+                    exit()
 
 def creacioncuenta():
             nombre = str(input("""Ha seleccionado usted la opción de crear una cuenta bancaria.
