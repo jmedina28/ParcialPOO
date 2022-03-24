@@ -52,5 +52,16 @@ Introduzca su nombre por favor:
             print("Hola " + nombre + ". Usted ha creado una cuenta en nuestro banco a fecha de " + str(datetime.today()) + " con el número de cuenta: " + numero)
             B = Cuenta(str(random.randint(100000, 999999)), "Persona B", datetime.today(), str(random.randint(100000000000, 999999999999)), 10000, 5)
             print("La segunda cuenta con la que va a poder operar ha sido creada por defecto a nombre de Esther, con un saldo también de 10000 euros y fue creada el 15/07/2014, es una cuenta VIP.")
-
+def operacion():
+    seleccion = int(input("""Introduzca que tipo de operación desea realizar:
+- Pulse 1 si desea RETIRAR dinero de su cuenta.
+-Pulse 2 si desea INGRESAR dinero a su cuenta.
+-Pulse 3 si desea TRANSFERIR dinero de una cuenta a otra.
+"""))
+    if seleccion == 1:
+        Cuenta.retiro(A)
+    if seleccion == 2:
+        Cuenta.ingreso(A)
+    if seleccion == 3:
+        Cuenta.transferencia(A)
 creacioncuenta()
