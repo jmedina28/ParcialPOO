@@ -27,5 +27,5 @@ class Cuenta():
         print("Usted ha ingresado " + str(dineroingreso) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
        
 A = Cuenta(21323434, "Juan", "2 de enero", 23294934, 10000, 1)
-
+B = Cuenta(21323432, "Ruben", "5 de enero", 43294934, 20000, 1)
 Cuenta.ingreso(A)
