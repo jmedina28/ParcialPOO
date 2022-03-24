@@ -65,3 +65,4 @@ def operacion():
     if seleccion == 3:
         Cuenta.transferencia(A)
 creacioncuenta()
+operacion()
