@@ -6,5 +6,16 @@ class Cuenta():
         self.numero = numero
         self.saldo = saldo
         self.modo = modo
+    
+    def retiro(self):
+        dineroretirar = int(input("""Ha seleccionado usted la opción de retirar dinero de su cuenta.
 
+¿Cuánto dinero desea retirar?(Esta operación es libre de comisiones.)
+
+"""))
+        if 0 < dineroretirar <= self.saldo:
+            self.saldo = self.saldo - dineroretirar
+            print("Usted ha retirado " + str(dineroretirar) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
+        
 A = Cuenta(21323434, "Juan", "2 de enero", 23294934, 10000, 1)
+Cuenta.retiro(A)
