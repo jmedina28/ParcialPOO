@@ -23,4 +23,8 @@ class Libro():
         self.titulo = nuevo
         print ("El título se ha sustituido por")
         print (self.titulo) #Aquí vuelvo a pedir que retorne el atributo para confirmar
-  
+
+l = Libro("1984", "d","s","George Orwell",121213)
+l.titulo = "Rebelión en la granja"
+print(l.titulo)
+
