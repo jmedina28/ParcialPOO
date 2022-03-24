@@ -6,3 +6,5 @@ class Cuenta():
         self.numero = numero
         self.saldo = saldo
         self.modo = modo
+
+A = Cuenta(21323434, "Juan", "2 de enero", 23294934, 10000, 1)
