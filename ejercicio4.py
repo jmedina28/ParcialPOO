@@ -17,5 +17,15 @@ class Cuenta():
             self.saldo = self.saldo - dineroretirar
             print("Usted ha retirado " + str(dineroretirar) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
         
+    def ingreso(self):
+        dineroingreso = int(input("""Ha seleccionado usted la opción de ingresar dinero a su cuenta.
+
+¿Cuánto dinero desea ingresar?(Esta operación es libre de comisiones.)
+
+"""))
+        self.saldo += dineroingreso
+        print("Usted ha ingresado " + str(dineroingreso) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
+       
 A = Cuenta(21323434, "Juan", "2 de enero", 23294934, 10000, 1)
-Cuenta.retiro(A)
+
+Cuenta.ingreso(A)
