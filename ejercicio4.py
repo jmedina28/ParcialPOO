@@ -18,7 +18,10 @@ class Cuenta():
         if 0 < dineroretirar <= self.saldo:
             self.saldo = self.saldo - dineroretirar
             print("Usted ha retirado " + str(dineroretirar) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
-        decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+            decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+        else:
+            print("No puede retirar más dinero del que tiene en su cuenta")
+            decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
         if decision == 1:
             operacion()
         else:
@@ -48,11 +51,18 @@ class Cuenta():
                 B.saldo += dinerotransferencia
                 print("Usted ha transferido " + str(dinerotransferencia) + "€ y su saldo actualmente es de " + str(self.saldo) + "€.")
                 print("El saldo de la cuenta B es de " + str(B.saldo) + "€.")
-            decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
-            if decision == 1:
-                operacion()
+                decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+                if decision == 1:
+                    operacion()
+                else:
+                    exit()
             else:
-                exit()
+                print("Operación no válida...")
+                decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+                if decision == 1:
+                    operacion()
+                else:
+                    exit()
         else:
             dinerotransferencia = int(input("""Ha seleccionado usted la opción de transferir dinero a otra cuenta.
 
@@ -70,7 +80,13 @@ class Cuenta():
                     operacion()
                 else:
                     exit()
-
+            else:
+                print("Operación no válida...")
+                decision = int(input("¿Desea continuar realizando operaciones? En caso afirmativo pulse 1, en caso contrario pulse cualquier otra tecla por favor: "))
+                if decision == 1:
+                    operacion()
+                else:
+                    exit()
 def creacioncuenta():
             nombre = str(input("""Ha seleccionado usted la opción de crear una cuenta bancaria.
 
